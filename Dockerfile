@@ -1,6 +1,8 @@
 # Stage 1: Build phase to keep the final image clean
 FROM postgres:18-alpine AS builder
 
+RUN apk update
+
 # Install build dependencies
 RUN apk add --no-cache \
     git \
